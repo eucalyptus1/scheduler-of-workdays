@@ -16,18 +16,18 @@ $(".saveBtn").on("click", function() {
 // change colour of blocks based on time passed
    function timeAudit() {
 
-    var date = $("#taskHour").find("span").text().trim();
+    var date = $("#taskHour").text().trim();
 
-    var time = moment(date, "L").set("hour", 9);
+    // var time = moment(date, "L").set("hour", 9);
 
-    if ($("date") === $("currentHour")) {
-      $("#taskHour").addClass("present")
+    if ($(date) === $(currentHour)) {
+      $(textarea).addClass("present");
 
-    } else if ($("date") < $("currentHour")) {
-        $("#taskHour").addClass("past")
+    } else if ($(date) < $(currentHour)) {
+        $(textarea).addClass("past");
 
-    } else if ($("date") > $("currentHour")) {
-        $("#taskHour").addClass("future")
+    } else if ($(date) > $(currentHour)) {
+        $(textarea).addClass("future");
     }
 
    };
